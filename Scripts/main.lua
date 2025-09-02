@@ -3,6 +3,7 @@ print("--------- SIMPLE CHEATS ---------")
 
 local UEHelpers = require("UEHelpers.UEHelpers")
 local WeaponsData = require("weapons_data")
+local ItemsData = require("items_data")
 local InfinitePowerOn = false;
 
 function ToggleInfinitePower()
@@ -141,3 +142,29 @@ RegisterConsoleCommandHandler("add_all_weapons", function(FullCommand, Parameter
     end
     return true
 end)
+
+RegisterConsoleCommandHandler("add_item", function(FullCommand, Parameters, Ar)
+    local itemID = tonumber(Parameters[1])
+    local quantity = tonumber(Parameters[2]) or 1
+    
+    local bc = FindFirstOf("BagComponent")
+    if bc then
+        bc:BagAddItemTwoParameter(itemID, quantity)
+        local itemName = ItemsData[itemID] or "Unknown Item"
+        Log(Ar, "Added " .. quantity .. "x " .. itemName .. " (ID: " .. itemID .. ")")
+    end
+    return true
+end)
+
+RegisterConsoleCommandHandler("add_all_items", function(FullCommand, Parameters, Ar)
+    
+    local bc = FindFirstOf("BagComponent")
+    if bc then
+       for itemID, itemName in pairs(ItemsData) do
+        bc:BagAddItemTwoParameter(itemID, 1)
+        Log(Ar, "Added " .. itemName .. " (ID: " .. itemID .. ")")
+       end
+    end
+    return true
+end)
+
