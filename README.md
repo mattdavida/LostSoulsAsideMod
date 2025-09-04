@@ -15,9 +15,13 @@ Keybind cheats to keep the power from the intro + console commands for game brea
 
 ### Console Commands (open console with ~):
 - `add_item <id> <qty>` - Add specific items (see all_items.jsonc for IDs)
-- `add_all_items` - Add one of every item in the game
+- `add_all_items` - Add every item in the game. ⚠️ Includes developer test items (管理员破防 +10000 ring, 配饰插画 recipes, etc.)
 - `add_all_weapons` - Adds every weapon in the game instantly
 - `toggle_fly` - Toggle flight mode for unlimited exploration + noclip
+- `unlock_hard_mode` - Unlock hard mode + fast travel without completing the game
+- `set_skill_points <amount>` - Set skill points to exact amount
+- `set_gold <amount>` - Set gold to exact amount
+- `unlock_all_achievements` - Unlock all Steam achievements instantly
 
 ## Requirements
 
@@ -49,9 +53,12 @@ For the `add_item` command, check **`all_items.jsonc`** for complete item refere
 - Works with any save file, new or existing
 - F5 toggles the ultimate transformation on/off
 - `add_item`: Target specific accessories/materials for builds
-- `add_all_items`: Includes developer testing items
+- ⚠️ `add_all_items`: Includes developer test items like 管理员破防 (+10000 defense), 配饰插画 (accessory illustration) recipes, etc.
 - `add_all_weapons` gives access to entire weapon arsenal  
 - `toggle_fly` allows unlimited exploration and movement + noclip 
+- `unlock_hard_mode`: Provides NG+ access and fast travel without beating the game
+- `set_skill_points`/`set_gold`: Direct save manipulation for precise control
+- `unlock_all_achievements`: Instantly unlocks all Steam achievements for the game
 - Compatible with other visual/performance mods  
 - No story progression required for anything
 
